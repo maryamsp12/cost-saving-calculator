@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { calculateCount } from './calculate';
-
 import './App.css';
 
 class App extends Component {
@@ -11,31 +10,20 @@ class App extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-
-
-
     if (this.state.input.product !== "" && this.state.input.count !== '') {
       const resultList = calculateCount(this.state.input.product, this.state.input.count);
       const result = [...this.state.result]
       this.setState({ result: resultList })
     }
-
-    // this.setState({ result, result : {piece: '', pack:'', box:''} })
-    //if (specie.specieName !== '' && specie.addNotes !== '' && specie.found !== ''){
-    // const list = [...this.state.list, specie]
-
   }
 
   handleChange = (e) => {
     const input = { ...this.state.input }
     input[e.currentTarget.name] = e.currentTarget.value;
     this.setState({ input })
-
   }
 
-
   render() {
-    // const result = calculateCount( this.state.input.count);
 
     return (
       <div>
