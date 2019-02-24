@@ -1,5 +1,5 @@
 export function calculateCount(product, count) {
-    
+
     if (product === 'bottle') {
 
         var bottle = 0; var pack = 0; var box = 0;
@@ -18,7 +18,7 @@ export function calculateCount(product, count) {
             }
 
             console.log(bottle + ' bottle', pack + ' packs', quotient + ' boxes')
-            return (bottle + " bottles (€4.1 each), " + pack + " packs (€40 each), " +  quotient + ' (€950 each)')
+            return (bottle + " bottles (€4.1 each), " + pack + " packs (€40 each), " + quotient + ' boxes (€950 each)')
         }
 
 
@@ -29,7 +29,7 @@ export function calculateCount(product, count) {
             bottle = remainder3;
 
             console.log(bottle + 'bottle' + pack + ' pack' + 0)
-            return ( bottle + " pieces (€4.1 each), " +  pack + ' packs (€40 each), ' + 0 + ' boxes (€950 each)')
+            return (bottle + " pieces (€4.1 each), " + pack + ' packs (€40 each), ' + 0 + ' boxes (€950 each)')
         }
 
         else if (count < 11) {
@@ -39,7 +39,7 @@ export function calculateCount(product, count) {
 
         }
         else return ('No values')
-        
+
 
     }
 
@@ -51,12 +51,12 @@ export function calculateCount(product, count) {
             let remainder = count % 5;
 
             console.log(remainder + " pieces," + quotient + ' packs');
-            return (remainder + " pieces (3€ each), " + quotient + " packs (14.5€ each), " ); 
+            return (remainder + " pieces (3€ each), " + quotient + " packs (14.5€ each), ");
 
         }
-        else if (count < 5) 
-        
-        console.log(count + ' pieces');
+        else if (count < 5)
+
+            console.log(count + ' pieces');
         return (count + " pieces (3€ each)");
 
         let remainder = count % 5;
@@ -72,16 +72,16 @@ export function calculateCount(product, count) {
             let quotient = Math.floor(count / 3);
 
             console.log(quotient + ' packs')
-            return(quotient + ' packs (€4.5 each)')
+            return (quotient + ' packs (€4.5 each)')
 
         }
         else if (count < 3) {
 
             console.log("You can't buy any pack")
-            return("You can't buy any pack")
+            return ("You can't buy any pack")
         }
 
     } else console.log('no value')
-        
+
 }
 
